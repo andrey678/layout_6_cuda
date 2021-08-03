@@ -3,14 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="viewport" content="width=1440">
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<title>Cuda</title>
 
 </head>
 <body>
-	
+	<!-- Оболочка (grid - контейнер) -->
+	<div class="wrapper">
+		<!-- Секция header -->
+		@@include('_header.html')
+		<!-- Секция services -->
+		@@include('_services.html')
+		<!-- Секция Team -->
+		@@include('_team.html')
+		<!-- Секция Skills -->
+		@@include('_skills.html')
+		<!-- Секция portfolio -->
+		@@include('_portfolio.html')
+		<!-- Секция Comments -->
+		@@include('_comments.html')
+		<!-- Секция Contact -->
+		@@include('_contact.html')
+		<!-- Секция footer -->
+		@@include('_footer.html')
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script.min.js"></script>
 </body>
 </html>

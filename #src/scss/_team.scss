@@ -1,0 +1,124 @@
+.team {
+	background: #e7f1f8;
+	grid-area:"team";
+	display: grid;
+	grid-template: 1fr minmax(171px, auto) minmax(45px, auto) minmax(568px, auto) 1fr / 1fr minmax(auto, 1029px) 1fr;
+	/* .team__title */
+	&__title {
+		color: #3c4761;
+		grid-area: 2 / 2 / 3 / 3;
+		&:after{
+			opacity: 0.74;
+			background: #bdd1df;
+		}
+	}
+	/* .team__text */
+	&__text {
+		@extend %section-text;
+		color: #3c4761;
+		text-align: center;
+		grid-area: 3 / 2 /span 1/ span 1;
+		margin: 0 0 50px 0;
+	}
+	/* .team__items */
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+		gap:75px;
+		grid-area: 4 / 2 / span 1 / span 1;
+	}
+	/* .team__item */
+	&__item {
+		
+		align-self: center;
+		display: grid;
+		grid-auto-flow:row;
+		grid-template: auto 1fr minmax(20px, auto) minmax(112px, auto) 1fr / 1fr;
+}
+	/* .team__item-photo */
+	&__item-photo {
+		position: relative;
+		padding: 0 0 100% 0;
+		margin: 0 0 41px 0;
+
+	}
+	/* .team__item-img */
+	&__item-img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		object-fit: cover;
+		top:0;
+		left: 0;
+		border-radius: 50%;
+		
+	}
+	/* .team__item-name */
+	&__item-name {
+		font-family: 'TitilliumWeb', sans-serif;
+		font-size: 24px;
+		line-height: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		color: #27283d;
+		text-align: center;
+		margin: 0 0 15px 0;
+	}
+	/* .team__item-position */
+	&__item-position {
+		font-family: 'TitilliumWeb',sans-serif;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		color: #30bae7;
+		text-align: center;
+		margin:0 0 26px 0;
+		
+	}
+	/* .team__item-text */
+	&__item-text {
+		font-family: 'TitilliumWeb', sans-serif;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 300;
+		letter-spacing: 0.02em;
+		color: #3c4761;
+		text-align: center;
+		margin: 0 0 31px 0;
+	}
+	/* .team__item-social */
+	&__item-social {
+		align-self: center;
+	}
+}
+.social {
+	display: grid;
+	grid-template:1fr / repeat(auto-fit, 32px);
+	// grid-auto-flow: column;
+	justify-content: center;
+	column-gap: 12px;
+	
+
+	/* .social__item */
+	&__item {
+		width: 32px;
+		height: 32px;
+		background-color: #bdd1df;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		transition: background-color 300ms ease 0s;
+		&:hover{
+			background-color: #30bae7;
+		}
+	}
+	/* .social__item-img */
+	&__item-img {
+
+	}
+}
+

@@ -1,0 +1,110 @@
+.header {
+	background: #87509c;
+	
+	grid-area: "header";
+	display: grid;
+	grid-template: 1fr minmax(97px, auto) minmax(233px, auto) minmax(124px, auto) 1fr / 1fr minmax(auto, 1034px) 1fr;
+	&__top {
+		grid-area: 2 / 2 / 3 / 3;
+		display: grid;
+		grid-template-columns: minmax(auto,118px) minmax(auto, 916px); 
+
+	}
+	/* .header__logo */
+	&__logo {
+		// grid-column: 2 / 3;
+		align-self:center;
+	}	
+	/* .header__logo-img */
+	&__logo-img {
+
+	}
+	/* .header__menu */
+	&__menu {
+		// grid-column: 2 / 3;
+		justify-self: end;
+		align-self: center;
+		
+		
+	}
+	/* .header__list */
+	&__list {
+		display: grid;
+		grid-auto-flow: column;
+		// height: 32px;
+
+		
+
+
+	}
+	/* .header__list-item */
+	&__list-item {
+		// height: 32px;
+		justify-self:center;
+		
+	}
+	/* .header__link */
+	&__link {
+		padding: 11px 11px;
+		font-family: 'TitilliumWeb', sans-serif;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 250ms ease 0s;
+
+		&:hover{
+			border-radius: 4px;
+			background-color: #643a79;
+
+		}
+	}
+	/* .header__burger */
+	&__burger {
+	}
+	/* .header__title */
+	&__title {
+		grid-area: 3 / 2 / span 1 / span 1;
+		align-self:center;
+		font-family: 'TitilliumWeb', sans-serif;
+		font-size: 42.2px;
+		line-height: 48px;
+		font-weight: 700;
+		color: #f7f3ea;
+		justify-self: center;
+		text-align: center;
+	}
+	/* .header__button */
+	&__button {
+		grid-area: 4 / 2 /span 1/span 1;
+		align-self:center;
+		justify-self: center;
+		width: 293px;
+		height: 70px;
+		background-color: #eb7d4b;
+		
+		font-family: 'TitilliumWeb',sans-serif;
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		color: #ffffff;
+		text-transform: uppercase;
+		border-radius: 4px;
+		box-shadow: 0 5px 0px #c86a40;
+		position: relative;
+		top:0;
+		transition:all 350ms ease 0s; 
+		&:hover{
+			top:3px;
+			box-shadow: 0 2px 0px #c86a40;
+		}
+	}
+	&__burger{
+		display: none;
+	}
+}

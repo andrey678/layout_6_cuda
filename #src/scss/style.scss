@@ -15,6 +15,46 @@ font-style: #{$style};
 }
 
 @import "fonts";
-.page {
 
+// Общие стили
+@import "global";
+//========================================================
+
+
+
+.wrapper{
+	min-height: 100%;
+	display:grid;
+	grid-template: minmax(596px,auto) minmax(747px,auto) minmax(914px,auto) minmax(655px, auto) minmax(1423px, auto) minmax(894px, auto) minmax(819px, auto) minmax(112px,auto) / 1fr;
+	grid-template-areas:
+		"header"
+		"services"
+		"team"
+		"skills"
+		"portfolio"
+		"comments"
+		"contact"
+		"footer";
 }
+
+// Подключение scss по секциям
+
+// Секция header
+@import "_header";
+// Секция Services
+@import "_services";
+// Секция Team
+@import "_team";
+// Секция Skills
+@import "_skills";
+// Секция portfolio
+@import "_portfolio";
+// Секция Comments
+@import "_comments";
+//Секция Contact
+@import "_contact";
+// Секция Footer
+@import "_footer";
+
+// Адаптив 768px
+@import "portrait-768";

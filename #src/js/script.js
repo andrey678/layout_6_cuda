@@ -15,3 +15,5 @@ document.querySelector('body').classList.add('webp');
 document.querySelector('body').classList.add('no-webp');
 }
 });
+
+

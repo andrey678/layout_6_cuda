@@ -1,0 +1,36 @@
+// Шаблоны
+
+%section-text {
+	font-family: 'TitilliumWeb',sans-serif;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+}
+
+// Общие стили
+
+
+.title {
+	font-family: 'TitilliumWeb', sans-serif;
+		font-size: 40px;
+		line-height: 29px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		justify-self: center;
+		align-self: center;
+			&:after{
+			content: '';
+			display: block;
+			width: 87px;
+			height: 4px;
+			position: relative;
+			bottom: -21px;
+			margin: 0 auto;
+			
+			
+
+		}
+}
+

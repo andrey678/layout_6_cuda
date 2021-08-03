@@ -1,0 +1,154 @@
+.portfolio {
+	background: #ffdd99;
+	grid-area:"portfolio";
+	display: grid;
+	grid-template: 1fr minmax(170px, auto) minmax(68px, auto) minmax(905px, auto) minmax(153px, auto) 1fr / 1fr minmax(auto, 1102px) 1fr;
+	
+	/* .portfolio__title */
+	&__title {
+		color: #393939;
+		grid-area: 2 / 2 / 3 / 3;
+		&:after{
+			background: #e5c37f;
+		}
+	}
+	/* .portfolio__text */
+	&__text {
+		@extend %section-text;
+		grid-area: 3 / 2 / 4 / 3;
+		color: #393939;
+		text-align: center;
+		margin: 0 0 42px 0;
+	}
+	/* .portfolio__content */
+	&__content {
+		
+		grid-area: 4 / 2 / 5 / 3;
+		max-width: 1102px;
+		margin: 0 auto;
+		
+	}
+	/* .portfolio__tabs */
+	&__tabs {
+
+		
+	}
+	/* .portfolio__tabs-items */
+	&__tabs-items {
+		display: flex;
+		justify-content: center;
+		margin: 0 0 62px 0;
+		
+		
+	}
+	/* .portfolio__tabs-item */
+	&__tabs-item {
+		margin-right: 10px;
+		border-radius: 4px;
+		width: 84px;
+		height: 38px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-transform: uppercase;
+
+
+
+
+		background-color: rgba(0,0,0,0.07);
+
+		font-family: 'TitilliumWeb',sans-serif;
+		font-size: 18px;
+		line-height: 19px;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		color: #393939;
+		text-decoration: none;
+
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover{
+			background: #fff;
+		}
+
+			
+	}
+	/* .portfolio__tabs-body */
+	&__tabs-body {
+	}
+	/* .portfolio__tabs-block */
+	&__tabs-block {
+			//###############################################################################
+		//#########################УБРАТЬ ПАДИНГ, ЕСЛИ НЕ НУЖЕН
+		// padding: 20px;
+		// display: grid;
+		// 	grid-template-columns: repeat(auto-fit, minmax(541px, 1fr));
+		// 	gap: 64px 20px;
+		display: none;
+		&:target{
+			// display: grid;
+			// grid-template-columns: repeat(2, minmax(auto, 541px));
+			// gap: 64px 20px;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap:wrap;
+			
+			
+
+		}
+	}
+
+
+		/* .portfolio__tabs-block-item */
+	&__tabs-block-item {
+		margin: 0 10px 64px 0;
+		
+
+	}
+	/* .portfolio__tabs-block-item-picture */
+	&__tabs-block-item-picture {
+		margin: 0 0 32px 0;
+		
+		
+	}
+	/* .portfolio__tabs-block-item-img */
+	&__tabs-block-item-img {
+	
+	}
+	/* .portfolio__tabs-block-item-name */
+	&__tabs-block-item-name {
+		font-family: 'TitilliumWeb', sans-serif;
+		font-size: 18px;
+		line-height: 19px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		color: #393939;
+		text-align: center;
+	}
+	/* .portfolio__button */
+	&__button {
+		font-family: 'TitilliumWeb', sans-serif;
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		color: #ffffff;
+		width: 293px;
+		height: 70px;
+		background-color: #17c2a4;
+		grid-area: 5 / 2 / 6 / 3;
+		display: block;
+		margin: 0 auto;
+		position: relative;
+		top: 0;
+		transition: all 250ms ease 0s;
+		border-radius: 4px;
+		box-shadow: 0 5px 0px #14a58c;
+		&:hover{
+			top:3px;
+			box-shadow: 0 2px 0px #14a58c;
+		}
+	}
+}

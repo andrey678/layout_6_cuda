@@ -1,0 +1,124 @@
+.contact {
+	background: #3c5499;
+	grid-area:"contact";
+	display: grid;
+	grid-template: 1fr minmax(174px, auto) minmax(42px, auto) minmax(488px, auto) 1fr /1fr minmax(auto, 860px) 1fr; 
+	/* .contact__title */
+	&__title {
+		grid-area: 2 / 2 / 3 / 3;
+		color: #ffffff;
+		&:after{
+			background-color: #273a71;
+		}
+	}
+	/* .contact__text */
+	&__text {
+		@extend %section-text;
+		grid-area: 3 / 2 / 4 / 3;
+		color: #ffffff;
+		text-align: center;
+	}
+	/* .contact__form */
+	&__form {
+		grid-area: 4 / 2 / 5 / 3;
+		align-self: center;
+	}
+	/* .contact__form-top */
+	&__form-top {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0 0 27px 0;
+	}
+	/* .contact__form-name */
+	&__form-name {
+		position: relative;
+	}
+	/* .contact__form-input */
+	&__form-input {
+		width: 414px;
+		height: 56px;
+		border-radius: 4px;
+		background-color: #273a71;
+		font-family: 'TitilliumWeb',sans-serif;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 400;
+		color: #ffffff;
+		padding: 0 0 0 25px;
+		&:focus ~ .contact__form-placeholder,
+		&:valid ~ .contact__form-placeholder{
+				display: none;
+			}
+		}
+	
+		/* .contact__form-placeholder */
+	&__form-placeholder {
+		font-family: 'TitilliumWeb', sans-serif;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 400;
+		color: #ffffff;
+		position: absolute;
+		top:20px;
+		left:25px;
+	}
+	/* .contact__form-star */
+	&__form-star {
+		font-family: Arial;
+		font-size: 16px;
+		color: #ff4444;
+	}
+	/* .contact__form-email */
+	&__form-email {
+		position: relative;
+	}
+	/* .contact__form-bottom */
+	&__form-bottom {
+		position: relative;
+		margin: 0 0 59px 0;
+
+	}
+	/* .contact__form-textarea */
+	&__form-textarea {
+		padding: 20px 0 0 25px;
+		width: 100%;
+		height: 200px;
+		background-color: #273a71;
+		border-radius: 4px;
+		font-family: 'TitilliumWeb', sans-serif;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 400;
+		color: #ffffff;
+		&:focus ~ .contact__form-placeholder,
+		&:valid ~ .contact__form-placeholder{
+				display: none;
+			}
+	}
+	/* .contact__form-btn */
+	&__form-btn {
+		width: 293px;
+		height: 70px;
+		background-color: #30bae7;
+		border-radius: 4px;
+		font-family: 'TitilliumWeb', sans-serif;
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		color: #ffffff;
+		margin: 0 auto;
+		display: block;
+		box-shadow: 0 4px 0px #299ec5;
+		transition: all 300ms ease 0s;
+		position:relative;
+		top: 0;
+
+
+		&:hover{
+			box-shadow: 0 1px 0px #299ec5;
+			top:3px;
+		}
+	}
+}
