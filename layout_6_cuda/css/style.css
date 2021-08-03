@@ -203,16 +203,40 @@ h6 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 2 / 2 / 3 / 3;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  padding: 5px 200px 0;
+}
+
+.header__top:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #87509c;
+  z-index: 2;
+}
+
+.header__body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: minmax(auto, 118px) minmax(auto, 916px);
   grid-template-columns: minmax(auto, 118px) minmax(auto, 916px);
+  position: relative;
+  height: 45px;
 }
 
 .header__logo {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  position: relative;
+  z-index: 3;
 }
 
 .header__menu {
@@ -227,6 +251,8 @@ h6 {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
+  position: relative;
+  z-index: 2;
 }
 
 .header__list-item {
@@ -259,6 +285,10 @@ h6 {
 .header__link:hover {
   border-radius: 4px;
   background-color: #643a79;
+}
+
+.header__burger {
+  display: none;
 }
 
 .header__title {
@@ -313,10 +343,6 @@ h6 {
   top: 3px;
   -webkit-box-shadow: 0 2px 0px #c86a40;
           box-shadow: 0 2px 0px #c86a40;
-}
-
-.header__burger {
-  display: none;
 }
 
 .services {
@@ -1313,6 +1339,7 @@ h6 {
     -ms-grid-columns: 1fr minmax(auto, 767px) 1fr;
         grid-template: 1fr minmax(97px, auto) minmax(233px, auto) minmax(124px, auto) 1fr/1fr minmax(auto, 767px) 1fr;
     /* .header__logo */
+    /* .header__burger */
   }
 
   .header__top {
@@ -1321,16 +1348,108 @@ h6 {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-area: 1 / 2 / span 1 / span 1;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: minmax(auto, 118px) minmax(auto, 916px);
-    grid-template-columns: minmax(auto, 118px) minmax(auto, 916px);
-    position: fixed;
-    top: 0;
-    left: 0;
+    padding: 1px 100px 0;
   }
 
   .header__menu {
-    display: none;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #d84848;
+    padding: 60px 75px 0 0;
+    -webkit-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+  }
+
+  .header__list {
+    grid-auto-flow: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+
+  .header__burger {
+    -ms-grid-column-align: end;
+        justify-self: end;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row-align: center;
+        align-self: center;
+    position: relative;
+    z-index: 3;
+  }
+
+  .header__burger-line {
+    position: absolute;
+    background: #ffffff;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    left: 0;
+    -webkit-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+  }
+
+  .header__burger:before,
+  .header__burger:after {
+    content: '';
+    background: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    -webkit-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+  }
+
+  .header__burger .header__burger:before {
+    top: 0;
+  }
+
+  .header__burger:after {
+    bottom: 0;
+  }
+
+  .header__link {
+    font-size: 24px;
+  }
+
+  .header__burger.active:before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .header__burger.active:after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header__burger.active .header__burger-line {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .header__menu.active {
+    top: 0;
+  }
+
+  body.lock {
+    overflow: hidden;
   }
 }
